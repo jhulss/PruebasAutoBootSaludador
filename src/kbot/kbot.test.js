@@ -29,6 +29,11 @@ describe("Saludor", () => {
         expect(resultado).toEqual("Buenas tardes Andrés");
     });
 
+    it("Saludar a Andrés en espanol por la noche", () => {
+        let kbot = new Kbot("ES");
+        let resultado = kbot.saludar("Andrés", 20)
+        expect(resultado).toEqual("Buenas noches Andrés");
+    });
     
   });
   
