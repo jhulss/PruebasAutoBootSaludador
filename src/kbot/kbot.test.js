@@ -1,4 +1,4 @@
-const Kbot = require("./Kbot");
+const Kbot = require("./kbot")
 
 /*console.log("Saludar a Andrés en idioma default".toUpperCase());
 let kbot = new Kbot();
@@ -41,5 +41,10 @@ describe("Saludor", () => {
         expect(resultado).toEqual("Good morning Andrés");
     });
     
+    it("Saludar a Andrés en ingles por la tarde", () => {
+        let kbot = new Kbot("EN");
+        let resultado = kbot.saludar("Andrés", 15)
+        expect(resultado).toEqual("Good afternoon Andrés");
+    });
   });
   
